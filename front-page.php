@@ -63,12 +63,9 @@
     </header>   
      <article>
         <section id="sec1-firstview">
-            <h1>ブログタイトル</h1>
+            <h1><?php bloginfo('name'); ?></h1>
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa a at, reiciendis aspernatur aliquam
-                    dolore quae dolorum nihil saepe consequatur sunt suscipit atque maiores unde sed, quidem fugiat sit
-                    est necessitatibus qui recusandae? Ut laborum aspernatur explicabo sit excepturi, nam perspiciatis!
-                    Debitis alias harum aperiam quo. Neque, reiciendis similique. Voluptate!</p>
+                <p><?php bloginfo('description'); ?></p>
                 <a href="#sec3-portfolio" class="btn">制作実績を見る</a>
                 <a href="#sec5-contactform" class="btn">お仕事のご依頼</a>
             </div>
