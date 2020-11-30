@@ -136,8 +136,22 @@ echo "今日は".date("Y/m/d").$week[$w]."です";
                     <input type="number" name="number" placeholder="表示記事数">
                     <input type="submit">
                 </form>
-                <?php $num = $_GET["number"];//GETメソッドで送られた数字を取得して変数numに代入
-                for($i=0;$i<$num;$i++):?> <!-- カウンター($i)が、入力された数字($num)より小さい間以下を繰り返す -->
+                <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                    <!-- コンテンツを表示 -->
+                        <div class="blog-content" >
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/thumb_01.png" alt="ブログ1サムネイル">
+                            <div class="blog-info">
+                                <h2>タイトルが入ります</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur corporis aliquid eius
+                                    blanditiis atque itaque quas ullam iusto veniam. Neque!</p>
+                                <a href="#">カテゴリ名</a><a href="#">2019.07.25</a>
+                            </div>
+                        </div>
+                    <?php endwhile; ?><?php else : ?>
+                <!-- コンテンツがない時の表示 -->
+                <?php endif; ?>
+
                 <div class="blog-content" >
                     <img src="<?php echo get_template_directory_uri(); ?>/img/thumb_01.png" alt="ブログ1サムネイル">
                     <div class="blog-info">
@@ -147,7 +161,7 @@ echo "今日は".date("Y/m/d").$week[$w]."です";
                         <a href="#">カテゴリ名</a><a href="#">2019.07.25</a>
                     </div>
                 </div>
-                <?php endfor; ?> <!-- 繰り返し処理の終了 -->
+                
             </div>
         </section>
 
