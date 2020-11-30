@@ -144,23 +144,12 @@ echo "今日は".date("Y/m/d").$week[$w]."です";
                             <div class="blog-info">
                                 <h2><?php the_title(); ?></h2>
                                 <p><?php the_content(); ?></p>
-                                <a href="#">カテゴリ名</a><a href="#">2019.07.25</a>
+                                <a href="#"><?php the_tags(); ?></a><a href="#"><?php the_date(); ?></a>
                             </div>
                         </div>
                     <?php endwhile; ?><?php else : ?>
                 <!-- コンテンツがない時の表示 -->
-                <?php endif; ?>
-
-                <div class="blog-content" >
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/thumb_01.png" alt="ブログ1サムネイル">
-                    <div class="blog-info">
-                        <h2>タイトルが入ります</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur corporis aliquid eius
-                            blanditiis atque itaque quas ullam iusto veniam. Neque!</p>
-                        <a href="#">カテゴリ名</a><a href="#">2019.07.25</a>
-                    </div>
-                </div>
-                
+                <?php endif; ?>               
             </div>
         </section>
 
