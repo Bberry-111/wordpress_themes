@@ -12,6 +12,7 @@
         }else{
             wp_enqueue_style("pc-css", get_template_directory_uri()."/css/style_pc.css");
         }
+        wp_enqueue_style("common-css", get_template_directory_uri()."/css/style.css");
         wp_enqueue_style("pc-css", get_template_directory_uri()."/css/style_pc.css");
         wp_enqueue_style("sp-css", get_template_directory_uri()."/css/style_sp.css");
         wp_enqueue_script("common", get_template_directory_uri()."/js/common.js", array(), '1.0.0', true);

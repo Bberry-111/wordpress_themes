@@ -9,17 +9,17 @@ get_header();
 the_post();
 ?>
 
+<div class="main-content">
 
-<br>
-<br>
-<br>
-<br>
-<br>
+    <div class="daily">
 
-<?php the_post_thumbnail(); ?>
-<h2>これは日報用PHPです。</h2>
-<p><?php the_field("day") ?></p>
-<p><?php the_field("content") ?></p>
-<img src="<?php the_field("img") ?>" alt="">
+        <img class="daily__img" src="<?php the_field("img") ?>" alt="">
+        <h2>これは日報用PHPです。</h2>
+        <p><?php the_field("day") ?></p>
+        <p><?php the_field("content") ?></p>
+    
+    </div>
+
+</div>
 
 <?php get_footer(); ?>
